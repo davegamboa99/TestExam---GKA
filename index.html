@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TestProject - GKA</title>
+  
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -37,7 +38,7 @@
         </button>
       </div>
 
-      <!-- Log In and Get Started Buttons (Desktop Only) -->
+      <!-- Log In and Get Started Buttons -->
       <div class="hidden md:flex space-x-4 font-bold">
         <a href="#" class="text-gray-700 border border-gray-300 rounded-full px-4 py-2 hover:bg-gray-100">Log In</a>
         <a href="#" class="bg-blue-600 text-white rounded-full px-4 py-2 hover:bg-blue-700">Get Started</a>
@@ -47,9 +48,8 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-white shadow-lg pt-20">
-    <!-- Menu Content Wrapper -->
+    <!-- Menu Content -->
     <div id="menu-content" class="relative bg-white p-4">
-      <!-- Exit Button -->
       <div class="absolute top-4 right-4">
         <button id="exit-menu-button" class="text-gray-500 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,16 +57,12 @@
           </svg>
         </button>
       </div>
-      
-      <!-- Menu Links -->
       <div class="px-4 py-4 space-y-2 font-bold">
         <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Features</a>
         <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Solutions</a>
         <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Resources</a>
         <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Pricing</a>
       </div>
-
-      <!-- Log In and Get Started Buttons (Mobile Only) -->
       <div class="flex flex-col mt-6 space-y-2 font-bold">
         <a href="#" class="text-gray-700 border border-gray-300 rounded-full text-center py-2 hover:bg-gray-100">Log In</a>
         <a href="#" class="bg-blue-600 text-white rounded-full text-center py-2 hover:bg-blue-700">Get Started</a>
@@ -77,7 +73,7 @@
   <!-- Hero Section -->
   <section class="pt-14 pb-16 relative z-10">
     <div class="grid grid-cols-1 md:grid-cols-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-8">
-      <!-- Left Column: col-span-8 -->
+      <!-- Left Column -->
       <div class="md:col-span-8 space-y-6">
         <h4 class="text-blue-500 font-semibold tracking-widest">BEST CAPTION HERE</h4>
         <h1 class="text-3xl md:text-5xl font-bold text-gray-900">Build online business <br> from home.</h1>
@@ -131,12 +127,51 @@
               <p class="text-lg font-bold text-gray-800 mt-4"><i class="fas fa-star text-green-500 text-3xl mr-2"></i>Trustpilot</p>
               <p class="text-sm text-black-500 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
             </div>
+
+            <!-- Clone the same three reviews for looping -->
+            <div class="review-box bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center">
+                <span class="text-green-500">
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span> 
+              </div>
+              <div class="flex items-center mt-1">
+                <p class=" text-gray-600">(45k Reviews)</p>
+              </div>
+              <p class="text-lg font-bold text-gray-800 mt-4"><i class="fas fa-star text-green-500 text-3xl mr-2"></i>Trustpilot</p>
+              <p class="text-sm text-black-500 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
+            </div>
+            <div class="review-box bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center">
+                <span class="text-green-500">
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span> 
+              </div>
+              <div class="flex items-center mt-1">
+                <p class=" text-gray-600">(45k Reviews)</p>
+              </div>
+              <p class="text-lg font-bold text-gray-800 mt-4"><i class="fas fa-star text-green-500 text-3xl mr-2"></i>Trustpilot</p>
+              <p class="text-sm text-black-500 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
+            </div>
+            <div class="review-box bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center">
+                <span class="text-green-500">
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span> 
+              </div>
+              <div class="flex items-center mt-1">
+                <p class=" text-gray-600">(45k Reviews)</p>
+              </div>
+              <p class="text-lg font-bold text-gray-800 mt-4"><i class="fas fa-star text-green-500 text-3xl mr-2"></i>Trustpilot</p>
+              <p class="text-sm text-black-500 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
+            </div>
+
           </div>
         </div>
 
       </div>
 
-      <!-- Right Column: col-span-4 -->
+      <!-- Right Column -->
       <div class="md:col-span-4 relative h-full">
         <img src="./thumbnail.jpg" alt="Hero Image" class="rounded-lg shadow-lg h-full object-cover">
         <!-- Play Button -->
@@ -160,6 +195,7 @@
     </div>
   </div>
 
+  <!-- Link to external JS file -->
   <script src="./script.js"></script>
 </body>
 </html>
