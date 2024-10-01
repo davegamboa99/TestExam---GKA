@@ -1,0 +1,55 @@
+/* CSS Variables for fonts, colors */
+:root {
+  --font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.floating-header {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+}
+
+#mobile-menu {
+  transition: all 0.3s ease;
+  z-index: 50; /* Ensure it's above other elements */
+}
+
+#menu-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 2rem; 
+}
+
+/* Flex track for sliding */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-box {
+  flex-basis: 100%; /* For mobile screens: 1 box visible at once */
+  min-width: 100%; /* Ensure full width on mobile */
+  box-sizing: border-box; 
+  margin-right: 16px; 
+}
+
+@media (min-width: 768px) {
+  .review-box {
+    flex-basis: calc(33.333% - 10.66px); /* 3 boxes visible at once, for medium and larger screens */
+    min-width: calc(33.333% - 10.66px);
+  }
+}
+
+.review-box:last-child {
+  margin-right: 0;
+}

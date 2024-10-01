@@ -1,274 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestProject - GKA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary-color: #005DFF;
-            --secondary-color: #FFFFFF;
-            --text-color: #333333;
-            --bg-light: #F5F7FA;
-            --font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-family);
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Header styling */
-        header {
-            background-color: var(--secondary-color);
-            width: 90%;
-            max-width: 1500px;
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 16px 32px;
-            z-index: 50;
-            border-radius: 9999px; /* Maximum border-radius for oblong shape */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        body {
-            padding-top: 100px;
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-        .mobile-menu.open {
-            display: block;
-        }
-        
-        @media (max-width: 1024px) {
-            .desktop-menu {
-                display: none;
-            }
-
-            .mobile-hamburger {
-                display: block !important;
-            }
-        }
-
-        /* Hide hamburger on larger screens */
-        .mobile-hamburger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .get-started-btn {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            transition: background-color 0.3s ease;
-        }
-
-        .get-started-btn:hover {
-            background-color: #0046cc;
-        }
-
-        .login-btn {
-            background-color: white;
-            color: var(--text-color);
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            border: 2px solid #D1D5DB; /* Light gray border */
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .login-btn:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        
-        .mobile-hamburger i {
-            font-size: 2rem; /* Adjust the size for better visibility */
-            color: var(--text-color); /* Visible color */
-        }
-
-        /* Styles for mobile menu */
-        .mobile-menu {
-            background-color: var(--secondary-color);
-            padding: 1rem;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            display: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 0 0 15px 15px;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .mobile-menu.open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-
-        /* Menu links styling */
-        .mobile-menu a {
-            display: block;
-            padding: 0.5rem 0;
-            color: var(--text-color);
-            text-align: center;
-            text-decoration: none;
-        }
-
-        .mobile-menu a:hover {
-            color: var(--primary-color);
-        }
-
-        @media (min-width: 1024px) {
-        .mobile-menu {
-            display: none !important;
-        }
-    }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TestProject - GKA</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <!-- Header Section -->
-    <header class="bg-white shadow-lg p-4">
-        <div class="relative container mx-auto flex flex-col">
-            <div class="flex items-center justify-between">
-                <a href="#" class="text-2xl font-bold text-black-500">zanrly</a>
 
-            <!-- Desktop Navigation Menu -->
-            <nav class="hidden lg:flex space-x-6 desktop-menu">
-                <a href="#" class="text-black-600 hover:text-gray-900 font-bold">Features</a>
-                <a href="#" class="text-black-600 hover:text-gray-900 font-bold">Solutions</a>
-                <a href="#" class="text-black-600 hover:text-gray-900 font-bold">Resources</a>
-                <a href="#" class="text-black-600 hover:text-gray-900 font-bold">Pricing</a>
-            </nav>
+  <!-- Header with Floating and Oblong Shape -->
+  <header class="bg-white floating-header py-4 px-6 mx-auto max-w-7xl relative z-40 mt-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo and "Zanrly" Text -->
+      <div class="flex items-center space-x-3">
+        <img src="./zanrly logo.PNG" alt="Logo" class="h-10 w-auto">
+        <span class="text-2xl font-bold text-gray-900">zanrly</span>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 text-sm font-bold">
+        <a href="#" class="text-secondary hover:text-primary">Features</a>
+        <a href="#" class="text-secondary hover:text-primary">Solutions</a>
+        <a href="#" class="text-secondary hover:text-primary">Resources</a>
+        <a href="#" class="text-secondary hover:text-primary">Pricing</a>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-500 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
 
-            <!-- Log In and Get Started Button -->
-            <div class="hidden lg:flex space-x-6 items-center desktop-menu">
-                <a href="#" class="login-btn font-bold">Log In</a>
-                <a href="#" class="get-started-btn font-bold">Get Started</a>
-            </div>
+      <!-- Log In and Get Started Buttons (Desktop Only) -->
+      <div class="hidden md:flex space-x-4 font-bold">
+        <a href="#" class="text-gray-700 border border-gray-300 rounded-full px-4 py-2 hover:bg-gray-100">Log In</a>
+        <a href="#" class="bg-blue-600 text-white rounded-full px-4 py-2 hover:bg-blue-700">Get Started</a>
+      </div>
+    </div>
+  </header>
 
-            <!-- Mobile Hamburger Menu Button -->
-            <div class="mobile-hamburger lg:hidden">
-                <i class="fas fa-bars" onclick="toggleMobileMenu()" aria-expanded="false" aria-label="Toggle mobile menu"></i>
-            </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-white shadow-lg pt-20">
+    <!-- Menu Content Wrapper -->
+    <div id="menu-content" class="relative bg-white p-4">
+      <!-- Exit Button -->
+      <div class="absolute top-4 right-4">
+        <button id="exit-menu-button" class="text-gray-500 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Menu Links -->
+      <div class="px-4 py-4 space-y-2 font-bold">
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Features</a>
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Solutions</a>
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Resources</a>
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2">Pricing</a>
+      </div>
 
-            </div>
+      <!-- Log In and Get Started Buttons (Mobile Only) -->
+      <div class="flex flex-col mt-6 space-y-2 font-bold">
+        <a href="#" class="text-gray-700 border border-gray-300 rounded-full text-center py-2 hover:bg-gray-100">Log In</a>
+        <a href="#" class="bg-blue-600 text-white rounded-full text-center py-2 hover:bg-blue-700">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="pt-14 pb-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-8">
+      <!-- Left Column: col-span-8 -->
+      <div class="md:col-span-8 space-y-6">
+        <h4 class="text-blue-500 font-semibold tracking-widest">BEST CAPTION HERE</h4>
+        <h1 class="text-3xl md:text-5xl font-bold text-gray-900">Build online business <br> from home.</h1>
+        <p class="text-md text-gray-600 font-bold">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do <br> amet sint. Velit officia consequat duis enim velit mollit. Exercitation <br> veniam consequat.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 font-bold">Get Started</a>
+          <a href="#" class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-full hover:bg-gray-100 font-bold">Watch Video</a>
         </div>
 
-        <!-- Mobile Menu (Initially hidden) -->
-        <div class="mobile-menu lg:hidden mt-4">
-            <a href="#" class="block">Features</a>
-            <a href="#" class="block">Solutions</a>
-            <a href="#" class="block">Resources</a>
-            <a href="#" class="block">Pricing</a>
-            <div class="space-y-4 mt-4">
-                <a href="#" class="login-btn block w-full">Log In</a>
-                <a href="#" class="get-started-btn block w-full">Get Started</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Centered Section similar to the header -->
-    <section class="container mx-auto max-w-screen-xl mt-12 p-4">
-        <div class="grid lg:grid-cols-12 gap-8">
-            <!-- Left Column with Text and Reviews -->
-            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
-                <p class="text-sm text-blue-500 uppercase tracking-widest">Best Caption Here</p>
-                <h1 class="text-4xl font-bold text-gray-900">Build online business from home.</h1>
-                <p class="text-black-600 font-bold">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
-
-                <!-- Get Started and Watch Video Buttons -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center justify-center lg:justify-start">
-                    <a href="#" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 font-bold">Get Started</a>
-                    <a href="#" class="bg-white text-gray-600 py-2 px-6 rounded-full border border-gray-300 hover:bg-gray-100 font-bold">Watch Video</a>
-                </div>
-                  <!-- Reviews Section -->
-                  <section class="mt-8">
-                      <!-- Updated Grid Layout for Reviews Cards -->
-                    
-                      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                          <!-- Review Box 1 -->
-                          <div class="bg-white p-6 rounded-lg shadow-lg">
-                              <div class="flex flex-col items-start mb-4">
-                                  <span class="text-green-500">
-                                      <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                                  </span>
-                                  <p class="text-gray-600">(45k Reviews)</p>
-                              </div>
-                              <h3 class="text-lg font-bold flex items-center">
-                                  <i class="fas fa-star text-green-500 text-3xl mr-2"></i> Trustpilot
-                              </h3>
-                              <p class="text-gray-600 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
-                          </div>
-
-                          <!-- Review Box 2 -->
-                          <div class="bg-white p-6 rounded-lg shadow-lg">
-                              <div class="flex flex-col items-start mb-4">
-                                  <span class="text-green-500">
-                                      <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                                  </span>
-                                  <p class="text-gray-600">(45k Reviews)</p>
-                              </div>
-                              <h3 class="text-lg font-bold flex items-center">
-                                  <i class="fas fa-star text-green-500 text-3xl mr-2"></i> Trustpilot
-                              </h3>
-                              <p class="text-gray-600 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
-                          </div>
-
-                          <!-- Review Box 3 -->
-                          <div class="bg-white p-6 rounded-lg shadow-lg">
-                              <div class="flex flex-col items-start mb-4">
-                                  <span class="text-green-500">
-                                      <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                                  </span>
-                                  <p class="text-gray-600">(45k Reviews)</p>
-                              </div>
-                              <h3 class="text-lg font-bold flex items-center">
-                                  <i class="fas fa-star text-green-500 text-3xl mr-2"></i> Trustpilot
-                              </h3>
-                              <p class="text-gray-600 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
-                          </div>
-                      </div>
-                  </section>
+        <!-- Reviews Section (Slider) -->
+        <div class="slider-container relative">
+          <div class="slider-track">
+            <!-- Review Box 1 -->
+            <div class="review-box bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center">
+                <span class="text-green-500">
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span> 
               </div>
-            <!-- Right Column with Video Placeholder -->
-            <div class="lg:col-span-6 flex justify-center items-center relative">
-                <img src="https://placehold.co/400x600" alt="placeholder" class="rounded-lg shadow-lg">
-                <a href="https://youtu.be/dU1xS07N-FA?si=eKGtyPJh4dw8MxYC" target="_blank" class="absolute inset-0 flex justify-center items-center">
-                    <i class="fas fa-play-circle text-blue-500 text-6xl"></i>
-                </a>
+              <div class="flex items-center mt-1">
+                <p class=" text-gray-600">(45k Reviews)</p>
+              </div>
+              <p class="text-lg font-bold text-gray-800 mt-4"><i class="fas fa-star text-green-500 text-3xl mr-2"></i>Trustpilot</p>
+              <p class="text-sm text-black-500 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
             </div>
+            <!-- Review Box 2 -->
+            <div class="review-box bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center">
+                <span class="text-green-500">
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span> 
+              </div>
+              <div class="flex items-center mt-1">
+                <p class=" text-gray-600">(45k Reviews)</p>
+              </div>
+              <p class="text-lg font-bold text-gray-800 mt-4"><i class="fas fa-star text-green-500 text-3xl mr-2"></i>Trustpilot</p>
+              <p class="text-sm text-black-500 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
+            </div>
+            <!-- Review Box 3 -->
+            <div class="review-box bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center">
+                <span class="text-green-500">
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span> 
+              </div>
+              <div class="flex items-center mt-1">
+                <p class=" text-gray-600">(45k Reviews)</p>
+              </div>
+              <p class="text-lg font-bold text-gray-800 mt-4"><i class="fas fa-star text-green-500 text-3xl mr-2"></i>Trustpilot</p>
+              <p class="text-sm text-black-500 mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."</p>
+            </div>
+          </div>
         </div>
-    </section>
 
+      </div>
 
-    <script>
-        function toggleMobileMenu() {
-        console.log("it is clicked")
-        const mobileMenu = document.querySelector('.mobile-menu');
-        mobileMenu.classList.toggle('open');
-        
-        // Toggle aria-expanded attribute for accessibility
-        const hamburger = document.querySelector('.mobile-hamburger i');
-        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-        hamburger.setAttribute('aria-expanded', !isExpanded);
-        }
-    </script>
+      <!-- Right Column: col-span-4 -->
+      <div class="md:col-span-4 relative h-full">
+        <img src="./thumbnail.jpg" alt="Hero Image" class="rounded-lg shadow-lg h-full object-cover">
+        <!-- Play Button -->
+        <a href="#video-modal" class="absolute inset-0 flex justify-center items-center">
+          <div class="w-16 h-16 flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8" class="text-blue-600 fill-current"></circle>
+              <path d="M6.271 5.055a.5.5 0 0 1 .771-.422l4.419 2.523a.5.5 0 0 1 0 .844L7.042 10.523a.5.5 0 0 1-.771-.422V5.477z" class="text-white fill-current"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Video -->
+  <div id="video-modal" class="fixed inset-0 hidden bg-gray-900 bg-opacity-75 flex justify-center items-center z-50">
+    <div class="bg-white rounded-lg overflow-hidden shadow-xl max-w-lg w-full">
+      <iframe class="w-full h-64" src="https://www.youtube.com/embed/dU1xS07N-FA?si=NaaKCwvDiv19cjm2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <button class="w-full bg-red-500 text-white py-2" id="close-video">Close</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
