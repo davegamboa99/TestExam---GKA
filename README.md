@@ -1,4 +1,4 @@
-Requirements: 
+# Requirements for this challenge: 
 1. The section must be 100% responsive
 2. Reuse Tailwind's pre-built CSS as much as possible.
 3. Colors and fonts
