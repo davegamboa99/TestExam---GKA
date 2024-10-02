@@ -10,3 +10,6 @@
 8. The review boxes are to be displayed as a slider with autoplay slide
 9. The Right column play button will trigger a video popup (Youtube video)
 10. Use pure HTML (no node, gulp, etc)
+
+## Landing Page Layout to follow
+![zanrlyLandingPage](https://github.com/user-attachments/assets/84d11ddc-2572-42c9-9db8-6935827143e7)
